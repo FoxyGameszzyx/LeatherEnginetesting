@@ -1037,6 +1037,7 @@ abstract FlxTextBorderStyle(String) from String {
 	 */
 		/*
 	var OUTLINE = "OUTLINE";
+		/*
 
 	/**
 	 * Outline, optimized using only 4 draw calls (might not work for narrow and/or 1-pixel fonts)
@@ -1044,23 +1045,23 @@ abstract FlxTextBorderStyle(String) from String {
 	/*	
 	var OUTLINE_FAST = "OUTLINE_FAST";
 }/*
-
+	/*
 @:enum
 abstract FlxTextAlign(String) from String {
 	var LEFT = "left";
-
+/*
 	/**
 	 * Warning: on Flash, this can have a negative impact on performance
 	 * of multiline texts that are frequently regenerated (especially with
 	 * `borderStyle == OUTLINE`) due to a workaround for blurry rendering.
-	 
+	 /*
 		/*
 	var CENTER = "center";
 
 	var RIGHT = "right";
 	var JUSTIFY = "justify";
  		/*
-
+/*
 	public static function fromOpenFL(align:AlignType):FlxTextAlign {
 		return switch (align) {
 			case TextFormatAlign.LEFT: LEFT;
@@ -1069,8 +1070,8 @@ abstract FlxTextAlign(String) from String {
 			case TextFormatAlign.JUSTIFY: JUSTIFY;
 			default: LEFT;
 		}
-	}
-
+	}/*
+		/*
 	public static function toOpenFL(align:FlxTextAlign):AlignType {
 		return switch (align) {
 			case LEFT: TextFormatAlign.LEFT;
@@ -1080,7 +1081,7 @@ abstract FlxTextAlign(String) from String {
 			default: TextFormatAlign.LEFT;
 		}
 	}
-}
-
+}/*
+/*
 private typedef AlignType = #if openfl_legacy String #else TextFormatAlign #end;
 /*

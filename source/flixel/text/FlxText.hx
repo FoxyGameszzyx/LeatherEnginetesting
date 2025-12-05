@@ -1040,11 +1040,11 @@ abstract FlxTextBorderStyle(String) from String {
 
 	/**
 	 * Outline, optimized using only 4 draw calls (might not work for narrow and/or 1-pixel fonts)
-	 */
-		/*
+	 /*
+	/*	
 	var OUTLINE_FAST = "OUTLINE_FAST";
-}
-/*
+}/*
+
 @:enum
 abstract FlxTextAlign(String) from String {
 	var LEFT = "left";

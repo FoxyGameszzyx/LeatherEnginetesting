@@ -364,57 +364,57 @@ import openfl.utils.AssetType;
 	 * @param	Start	The start index of the string where the format will be applied.
 	 * @param	End		The end index of the string where the format will be applied.
 	 */
-	public function addFormat(Format:FlxTextFormat, Start:Int = -1, End:Int = -1):FlxText {
-		_formatRanges.push(new FlxTextFormatRange(Format, Start, End));
+	//public function addFormat(Format:FlxTextFormat, Start:Int = -1, End:Int = -1):FlxText {
+		//_formatRanges.push(new FlxTextFormatRange(Format, Start, End));
 		// sort the array using the start value of the format so we can skip formats that can't be applied to the textField
-		_formatRanges.sort(function(left, right) {
-			return left.range.start < right.range.start ? -1 : 1;
-		});
-		_regen = true;
+		//_formatRanges.sort(function(left, right) {
+			//return left.range.start < right.range.start ? -1 : 1;
+		//});
+		//_regen = true;
 
-		return this;
-	}
+		//return this;
+	//}
 
 	/**
 	 * Removes a specific `FlxTextFormat` from this text.
 	 * If a range is specified, this only removes the format when it touches that range.
 	 */
-	public function removeFormat(Format:FlxTextFormat, ?Start:Int, ?End:Int):FlxText {
-		var i = _formatRanges.length;
-		while (i-- > 0) {
-			var formatRange = _formatRanges[i];
-			if (formatRange.format != Format)
-				continue;
+	//public function removeFormat(Format:FlxTextFormat, ?Start:Int, ?End:Int):FlxText {
+		//var i = _formatRanges.length;
+		//while (i-- > 0) {
+			//var formatRange = _formatRanges[i];
+			//if (formatRange.format != Format)
+				//continue;
 
-			if (Start != null && End != null) {
-				var range = formatRange.range;
-				if (Start >= range.end || End <= range.start)
-					continue;
+			//if (Start != null && End != null) {
+				//var range = formatRange.range;
+				//if (Start >= range.end || End <= range.start)
+					//continue;
 
-				if (Start > range.start && End < range.end) {
-					addFormat(formatRange.format, End + 1, range.end);
-					range.end = Start;
-					continue;
-				}
+				//if (Start > range.start && End < range.end) {
+					//addFormat(formatRange.format, End + 1, range.end);
+					//range.end = Start;
+					//continue;
+				//}
 
-				if (Start <= range.start && End < range.end) {
-					range.start = End;
-					continue;
-				}
+				//if (Start <= range.start && End < range.end) {
+					//range.start = End;
+					//continue;
+				//}
 
-				if (Start > range.start && End >= range.end) {
-					range.end = Start;
-					continue;
-				}
-			}
+				//if (Start > range.start && End >= range.end) {
+					//range.end = Start;
+					//continue;
+				//}
+			//}
 
-			_formatRanges.remove(formatRange);
-		}
+			//_formatRanges.remove(formatRange);
+		//}
 
-		_regen = true;
+		//_regen = true;
 
-		return this;
-	}
+		//return this;
+	//}
 
 	/**
 	 * Clears all the formats applied.

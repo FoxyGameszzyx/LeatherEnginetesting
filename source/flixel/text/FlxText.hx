@@ -231,18 +231,18 @@ import openfl.utils.AssetType;
 	 * @param	atlas	atlas to stamp graphic to.
 	 * @return	whether the graphic was stamped on the atlas successfully
 	 */
-	public function stampOnAtlas(atlas:FlxAtlas):Bool {
-		regenGraphic();
+	//public function stampOnAtlas(atlas:FlxAtlas):Bool {
+		//regenGraphic();
 
-		var node:FlxNode = atlas.addNode(graphic.bitmap, graphic.key);
-		var result:Bool = (node != null);
+		//var node:FlxNode = atlas.addNode(graphic.bitmap, graphic.key);
+		//var result:Bool = (node != null);
 
-		if (node != null) {
-			frames = node.getImageFrame();
-		}
+		//if (node != null) {
+			//frames = node.getImageFrame();
+		//}
 
-		return result;
-	}
+		//return result;
+	//}
 
 	/**
 	 * Applies formats to text between marker characters, then removes those markers.

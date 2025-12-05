@@ -172,39 +172,39 @@ import openfl.utils.AssetType;
 	 * @param   Size           The font size for this text object.
 	 * @param   EmbeddedFont   Whether this text field uses embedded fonts or not.
 	 */
-	public function new(X:Float = 0, Y:Float = 0, FieldWidth:Float = 0, ?Text:String, Size:Int = 8, EmbeddedFont:Bool = true) {
-		super(X, Y);
+	//public function new(X:Float = 0, Y:Float = 0, FieldWidth:Float = 0, ?Text:String, Size:Int = 8, EmbeddedFont:Bool = true) {
+		//super(X, Y);
 
-		if (Text == null || Text == "") {
+		//if (Text == null || Text == "") {
 			// empty texts have a textHeight of 0, need to
 			// prevent initializing with "" before the first calcFrame() call
-			text = "";
-			Text = " ";
-		} else {
-			text = Text;
-		}
+			//text = "";
+			//Text = " ";
+		//} else {
+			//text = Text;
+		//}
 
-		textField = new TextField();
-		textField.selectable = false;
-		textField.multiline = true;
-		textField.wordWrap = true;
-		_defaultFormat = new TextFormat(null, Size, 0xffffff);
-		font = FlxAssets.FONT_DEFAULT;
-		_formatAdjusted = new TextFormat();
-		textField.defaultTextFormat = _defaultFormat;
-		textField.text = Text;
-		fieldWidth = FieldWidth;
-		textField.embedFonts = EmbeddedFont;
-		textField.sharpness = 100;
-		textField.height = (Text.length <= 0) ? 1 : 10;
+		//textField = new TextField();
+		//textField.selectable = false;
+		//textField.multiline = true;
+		//textField.wordWrap = true;
+		//_defaultFormat = new TextFormat(null, Size, 0xffffff);
+		//font = FlxAssets.FONT_DEFAULT;
+		//_formatAdjusted = new TextFormat();
+		//textField.defaultTextFormat = _defaultFormat;
+		//textField.text = Text;
+		//fieldWidth = FieldWidth;
+		//textField.embedFonts = EmbeddedFont;
+		//textField.sharpness = 100;
+		//textField.height = (Text.length <= 0) ? 1 : 10;
 
-		allowCollisions = NONE;
-		moves = false;
+		//allowCollisions = NONE;
+		//moves = false;
 
-		drawFrame();
+		//drawFrame();
 
-		shadowOffset = FlxPoint.get(1, 1);
-	}
+		//shadowOffset = FlxPoint.get(1, 1);
+	//}
 
 	/**
 	 * Clean up memory.

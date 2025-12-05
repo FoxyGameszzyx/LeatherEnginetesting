@@ -1053,12 +1053,13 @@ abstract FlxTextAlign(String) from String {
 	 * Warning: on Flash, this can have a negative impact on performance
 	 * of multiline texts that are frequently regenerated (especially with
 	 * `borderStyle == OUTLINE`) due to a workaround for blurry rendering.
-	 */
+	 
 		/*
 	var CENTER = "center";
 
 	var RIGHT = "right";
 	var JUSTIFY = "justify";
+ 		/*
 
 	public static function fromOpenFL(align:AlignType):FlxTextAlign {
 		return switch (align) {

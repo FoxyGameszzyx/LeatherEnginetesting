@@ -805,6 +805,7 @@ import openfl.utils.AssetType;
 	}
 	#end
 
+	/*	
 	override public function draw():Void {
 		regenGraphic();
 		super.draw();
@@ -815,6 +816,7 @@ import openfl.utils.AssetType;
 	 *
 	 * @param	RunOnCpp	Whether the frame should also be recalculated if we're on a non-flash target
 	 */
+	/*	
 	override function calcFrame(RunOnCpp:Bool = false):Void {
 		if (textField == null)
 			return;
@@ -901,6 +903,7 @@ import openfl.utils.AssetType;
 	/**
 	 * Helper function for `applyBorderStyle()`
 	 */
+		/*
 	inline function copyTextWithOffset(x:Float, y:Float) {
 		var graphic:BitmapData = _hasBorderAlpha ? _borderPixels : graphic.bitmap;
 		_matrix.translate(x, y);

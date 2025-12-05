@@ -419,12 +419,12 @@ import openfl.utils.AssetType;
 	/**
 	 * Clears all the formats applied.
 	 */
-	public function clearFormats():FlxText {
-		_formatRanges = [];
-		updateDefaultFormat();
+	//public function clearFormats():FlxText {
+		//_formatRanges = [];
+		//updateDefaultFormat();
 
-		return this;
-	}
+		//return this;
+	//}
 
 	/**
 	 * You can use this if you have a lot of text parameters to set instead of the individual properties.
@@ -438,26 +438,26 @@ import openfl.utils.AssetType;
 	 * @param	EmbeddedFont	Whether this text field uses embedded fonts or not
 	 * @return	This `FlxText` instance (nice for chaining stuff together, if you're into that).
 	 */
-	public function setFormat(?Font:String, Size:Int = 8, Color:FlxColor = FlxColor.WHITE, ?Alignment:FlxTextAlign, ?BorderStyle:FlxTextBorderStyle,
-			BorderColor:FlxColor = FlxColor.TRANSPARENT, EmbeddedFont:Bool = true):FlxText {
-		BorderStyle = (BorderStyle == null) ? NONE : BorderStyle;
+	//public function setFormat(?Font:String, Size:Int = 8, Color:FlxColor = FlxColor.WHITE, ?Alignment:FlxTextAlign, ?BorderStyle:FlxTextBorderStyle,
+			//BorderColor:FlxColor = FlxColor.TRANSPARENT, EmbeddedFont:Bool = true):FlxText {
+		//BorderStyle = (BorderStyle == null) ? NONE : BorderStyle;
 
-		if (EmbeddedFont) {
-			font = Font;
-		} else if (Font != null) {
-			systemFont = Font;
-		}
+		//if (EmbeddedFont) {
+			//font = Font;
+		//} else if (Font != null) {
+			//systemFont = Font;
+		//}
 
-		size = Size;
-		color = Color;
-		if (Alignment != null)
-			alignment = Alignment;
-		setBorderStyle(BorderStyle, BorderColor);
+		//size = Size;
+		//color = Color;
+		//if (Alignment != null)
+			//alignment = Alignment;
+		//setBorderStyle(BorderStyle, BorderColor);
 
-		updateDefaultFormat();
+		//updateDefaultFormat();
 
-		return this;
-	}
+		//return this;
+	//}
 
 	/**
 	 * Set border's style (shadow, outline, etc), color, and size all in one go!
@@ -467,6 +467,7 @@ import openfl.utils.AssetType;
 	 * @param	Size outline size in pixels
 	 * @param	Quality outline quality - # of iterations to use when drawing. `0`: just 1, `1`: equal number to `Size`
 	 */
+	/*
 	public inline function setBorderStyle(Style:FlxTextBorderStyle, Color:FlxColor = 0, Size:Float = 1, Quality:Float = 1):FlxText {
 		borderStyle = Style;
 		borderColor = Color;

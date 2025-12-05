@@ -947,6 +947,7 @@ import openfl.utils.AssetType;
 	 *
 	 * @return	A writable copy of `TextField.defaultTextFormat`.
 	 */
+		/*
 	function dtfCopy():TextFormat {
 		var dtf:TextFormat = textField.defaultTextFormat;
 		return new TextFormat(dtf.font, dtf.size, dtf.color, dtf.bold, dtf.italic, dtf.underline, dtf.url, dtf.target, dtf.align);
@@ -971,11 +972,13 @@ class FlxTextFormat {
 	 * The leading (vertical space between lines) of the text.
 	 * @since 4.10.0
 	 */
+	 /*
 	public var leading(default, set):Int;
 
 	/**
 	 * The border color if the text has a shadow or a border
 	 */
+	/*
 	var borderColor:FlxColor;
 
 	var format(default, null):TextFormat;
@@ -986,6 +989,7 @@ class FlxTextFormat {
 	 * @param   Italic        Whether the text should be in italics (must be supported by the font). Only works on Flash. `false` by default.
 	 * @param   BorderColor   Border color, in `0xAARRGGBB` format. By default, no border (`null` / transparent).
 	 */
+		/*
 	public function new(?FontColor:FlxColor, ?Bold:Bool, ?Italic:Bool, ?BorderColor:FlxColor) {
 		format = new TextFormat(null, null, FontColor, Bold, Italic);
 		borderColor = BorderColor == null ? FlxColor.TRANSPARENT : BorderColor;
@@ -1025,16 +1029,19 @@ abstract FlxTextBorderStyle(String) from String {
 	 * A simple shadow to the lower-right.
 	 * Use `FlxText.shadowOffset` for custom placement.
 	 */
+		/*
 	var SHADOW = "SHADOW";
 
 	/**
 	 * Outline on all 8 sides
 	 */
+		/*
 	var OUTLINE = "OUTLINE";
 
 	/**
 	 * Outline, optimized using only 4 draw calls (might not work for narrow and/or 1-pixel fonts)
 	 */
+		/*
 	var OUTLINE_FAST = "OUTLINE_FAST";
 }
 
@@ -1047,6 +1054,7 @@ abstract FlxTextAlign(String) from String {
 	 * of multiline texts that are frequently regenerated (especially with
 	 * `borderStyle == OUTLINE`) due to a workaround for blurry rendering.
 	 */
+		/*
 	var CENTER = "center";
 
 	var RIGHT = "right";

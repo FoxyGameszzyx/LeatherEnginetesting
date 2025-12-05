@@ -209,19 +209,19 @@ import openfl.utils.AssetType;
 	/**
 	 * Clean up memory.
 	 */
-	override public function destroy():Void {
-		textField = null;
-		_font = null;
-		_defaultFormat = null;
-		_formatAdjusted = null;
-		shadowOffset = FlxDestroyUtil.put(shadowOffset);
-		super.destroy();
-	}
+	//override public function destroy():Void {
+		//textField = null;
+		//_font = null;
+		//_defaultFormat = null;
+		//_formatAdjusted = null;
+		//shadowOffset = FlxDestroyUtil.put(shadowOffset);
+		//super.destroy();
+	//}
 
-	override public function drawFrame(Force:Bool = false):Void {
-		_regen = _regen || Force;
-		super.drawFrame(_regen);
-	}
+	//override public function drawFrame(Force:Bool = false):Void {
+		//_regen = _regen || Force;
+		//super.drawFrame(_regen);
+	//}
 
 	/**
 	 * Stamps text onto specified atlas object and loads graphic from this atlas.

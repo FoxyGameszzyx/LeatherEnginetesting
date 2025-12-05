@@ -1044,7 +1044,7 @@ abstract FlxTextBorderStyle(String) from String {
 		/*
 	var OUTLINE_FAST = "OUTLINE_FAST";
 }
-
+/*
 @:enum
 abstract FlxTextAlign(String) from String {
 	var LEFT = "left";

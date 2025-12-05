@@ -21,7 +21,7 @@ import flixel.util.helpers.FlxRange;
 import openfl.Assets;
 
 using flixel.util.FlxStringUtil;
-using flixel.util.FlxUnicodeUtil;
+//using flixel.util.FlxUnicodeUtil;
 
 #if flash
 import openfl.geom.Rectangle;
@@ -36,130 +36,130 @@ import openfl.utils.AssetType;
  * Extends FlxSprite to support rendering text. Can tint, fade, rotate and scale just like a sprite. Doesn't really animate
  * though. Also does nice pixel-perfect centering on pixel fonts as long as they are only one-liners.
  */
-class FlxText extends FlxSprite {
+//class FlxText extends FlxSprite {
 	/**
 	 * 2px gutter on both top and bottom
 	 */
-	static inline var VERTICAL_GUTTER:Int = 4;
+	//static inline var VERTICAL_GUTTER:Int = 4;
 
 	/**
 	 * The text being displayed.
 	 */
-	public var text(default, set):String = "";
+	//public var text(default, set):String = "";
 
 	/**
 	 * The size of the text being displayed in pixels.
 	 */
-	public var size(get, set):Int;
+	//public var size(get, set):Int;
 
 	/**
 	 * The font used for this text (assuming that it's using embedded font).
 	 */
-	public var font(get, set):String;
+	//public var font(get, set):String;
 
 	/**
 	 * Whether this text field uses an embedded font (by default) or not.
 	 * Read-only - use `systemFont` to specify a system font to use, which then automatically sets this to `false`.
 	 */
-	public var embedded(get, never):Bool;
+	//public var embedded(get, never):Bool;
 
 	/**
 	 * The system font for this text (not embedded). Setting this sets `embedded` to `false`.
 	 * Passing an invalid font name (like `""` or `null`) causes a default font to be used.
 	 */
-	public var systemFont(get, set):String;
+	//public var systemFont(get, set):String;
 
 	/**
 	 * Whether to use bold text or not (`false` by default).
 	 */
-	public var bold(get, set):Bool;
+	//public var bold(get, set):Bool;
 
 	/**
 	 * Whether to use italic text or not (`false` by default). Only works on Flash.
 	 */
-	public var italic(get, set):Bool;
+	//public var italic(get, set):Bool;
 
 	/**
 	 * Whether to use word wrapping and multiline or not (`true` by default).
 	 */
-	public var wordWrap(get, set):Bool;
+	//public var wordWrap(get, set):Bool;
 
 	/**
 	 * The alignment of the font. Note: `autoSize` must be set to
 	 * `false` or `alignment` won't show any visual differences.
 	 */
-	public var alignment(get, set):FlxTextAlign;
+	//public var alignment(get, set):FlxTextAlign;
 
 	/**
 	 * The border style to use
 	 */
-	public var borderStyle(default, set):FlxTextBorderStyle = NONE;
+	//public var borderStyle(default, set):FlxTextBorderStyle = NONE;
 
 	/**
 	 * The color of the border in `0xAARRGGBB` format
 	 */
-	public var borderColor(default, set):FlxColor = FlxColor.TRANSPARENT;
+	//public var borderColor(default, set):FlxColor = FlxColor.TRANSPARENT;
 
 	/**
 	 * The size of the border, in pixels.
 	 */
-	public var borderSize(default, set):Float = 1;
+	//public var borderSize(default, set):Float = 1;
 
 	/**
 	 * How many iterations do use when drawing the border. `0`: only 1 iteration, `1`: one iteration for every pixel in `borderSize`
 	 * A value of `1` will have the best quality for large border sizes, but might reduce performance when changing text.
 	 * NOTE: If the `borderSize` is `1`, `borderQuality` of `0` or `1` will have the exact same effect (and performance).
 	 */
-	public var borderQuality(default, set):Float = 1;
+	//public var borderQuality(default, set):Float = 1;
 
 	/**
 	 * Reference to a `TextField` object used internally for rendering -
 	 * be sure to know what you're doing if messing with its properties!
 	 */
-	public var textField(default, null):TextField;
+	//public var textField(default, null):TextField;
 
 	/**
 	 * The width of the `TextField` object used for bitmap generation for this `FlxText` object.
 	 * Use it when you want to change the visible width of text. Enables `autoSize` if `<= 0`.
 	 */
-	public var fieldWidth(get, set):Float;
+	//public var fieldWidth(get, set):Float;
 
 	/**
 	 * Whether the `fieldWidth` should be determined automatically. Requires `wordWrap` to be `false`.
 	 */
-	public var autoSize(get, set):Bool;
+	//public var autoSize(get, set):Bool;
 
 	/**
 	 * Offset that is applied to the shadow border style, if active.
 	 * `x` and `y` are multiplied by `borderSize`. Default is `(1, 1)`, or lower-right corner.
 	 */
-	public var shadowOffset(default, null):FlxPoint;
+	//public var shadowOffset(default, null):FlxPoint;
 
-	var _defaultFormat:TextFormat;
-	var _formatAdjusted:TextFormat;
-	var _formatRanges:Array<FlxTextFormatRange> = [];
-	var _font:String;
+	//var _defaultFormat:TextFormat;
+	//var _formatAdjusted:TextFormat;
+	//var _formatRanges:Array<FlxTextFormatRange> = [];
+	//var _font:String;
 
 	/**
 	 * Helper boolean which tells whether to update graphic of this text object or not.
 	 */
-	var _regen:Bool = true;
+	//var _regen:Bool = true;
 
 	/**
 	 * Helper vars to draw border styles with transparency.
 	 */
-	var _borderPixels:BitmapData;
+	//var _borderPixels:BitmapData;
 
-	var _borderColorTransform:ColorTransform;
+	//var _borderColorTransform:ColorTransform;
 
-	var _hasBorderAlpha = false;
+	//var _hasBorderAlpha = false;
 
-	#if flash
+	//#if flash
 	/**
 	 * Helper to draw line by line used at `drawTextFieldTo()`.
 	 */
-	var _textFieldRect:Rectangle = new Rectangle();
-	#end
+	//var _textFieldRect:Rectangle = new Rectangle();
+	//#end
 
 	/**
 	 * Creates a new `FlxText` object at the specified position.

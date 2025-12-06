@@ -309,7 +309,7 @@ class PlayState extends MusicBeatState {
 	/**
 		Current text near the progress / time bar.
 	**/
-	public var infoTxt:FlxText;
+	//public var infoTxt:FlxText;
 
 	/**
 		Total notes interacted with. (Includes missing and hitting)
@@ -454,7 +454,7 @@ class PlayState extends MusicBeatState {
 	/**
 		Current text that displays your ratings (plus misses and MA/PA).
 	**/
-	public var ratingText:FlxText;
+	//public var ratingText:FlxText;
 
 	/**
 		Variable used by Lua Modcharts to stop the song midway.
@@ -4481,4 +4481,5 @@ enum Execute_On {
 	MODCHART;
 	STAGE;
 }
+
 

@@ -304,7 +304,7 @@ class PlayState extends MusicBeatState {
 	/**
 		Current text under the health bar (displays score and other stats).
 	**/
-	public var scoreTxt:FlxText;
+	//public var scoreTxt:FlxText;
 
 	/**
 		Current text near the progress / time bar.
@@ -4481,3 +4481,4 @@ enum Execute_On {
 	MODCHART;
 	STAGE;
 }
+

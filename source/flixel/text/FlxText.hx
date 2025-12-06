@@ -1060,25 +1060,25 @@ class FlxTextFormat {
 	//var RIGHT = "right";
 	//var JUSTIFY = "justify";
  		
-	public static function fromOpenFL(align:AlignType):FlxTextAlign {
-		return switch (align) {
-			case TextFormatAlign.LEFT: LEFT;
-			case TextFormatAlign.CENTER: CENTER;
-			case TextFormatAlign.RIGHT: RIGHT;
-			case TextFormatAlign.JUSTIFY: JUSTIFY;
-			default: LEFT;
-		}
-	}
+	//public static function fromOpenFL(align:AlignType):FlxTextAlign {
+		//return switch (align) {
+			//case TextFormatAlign.LEFT: LEFT;
+			//case TextFormatAlign.CENTER: CENTER;
+			//case TextFormatAlign.RIGHT: RIGHT;
+			//case TextFormatAlign.JUSTIFY: JUSTIFY;
+			//default: LEFT;
+		//}
+	//}
 		
-	public static function toOpenFL(align:FlxTextAlign):AlignType {
-		return switch (align) {
-			case LEFT: TextFormatAlign.LEFT;
-			case CENTER: TextFormatAlign.CENTER;
-			case RIGHT: TextFormatAlign.RIGHT;
-			case JUSTIFY: TextFormatAlign.JUSTIFY;
-			default: TextFormatAlign.LEFT;
-		}
-	}
-}
+	//public static function toOpenFL(align:FlxTextAlign):AlignType {
+		//return switch (align) {
+			//case LEFT: TextFormatAlign.LEFT;
+			//case CENTER: TextFormatAlign.CENTER;
+			//case RIGHT: TextFormatAlign.RIGHT;
+			//case JUSTIFY: TextFormatAlign.JUSTIFY;
+			//default: TextFormatAlign.LEFT;
+		//}
+	//}
+//}
 
 private typedef AlignType = #if openfl_legacy String #else TextFormatAlign #end;

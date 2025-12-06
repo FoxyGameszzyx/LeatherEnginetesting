@@ -1035,7 +1035,7 @@ abstract FlxTextBorderStyle(String) from String {
 	/**
 	 * Outline on all 8 sides
 	 */
-		/*
+		 /*
 	var OUTLINE = "OUTLINE";
 		/*
 

@@ -2829,7 +2829,7 @@ class PlayState extends MusicBeatState {
 	var rating:FlxSprite = new FlxSprite();
 	var ratingTween:VarTween;
 
-	var accuracyText:FlxText = new FlxText(0, 0, 0, "bruh", 24);
+	//var accuracyText:FlxText = new FlxText(0, 0, 0, "bruh", 24);
 	var accuracyTween:VarTween;
 
 	var numbers:Array<FlxSprite> = [];
@@ -4481,5 +4481,6 @@ enum Execute_On {
 	MODCHART;
 	STAGE;
 }
+
 
 

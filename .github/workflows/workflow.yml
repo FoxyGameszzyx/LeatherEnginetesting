@@ -43,6 +43,9 @@ jobs:
         run: echo "${{github.run_id}}" > VERSION
       - name: Compile Linux
         run: haxelib run lime build Project.xml linux --app-version="4.0.0-${{ github.run_id}}"
+      # Verify files exist before upload
+      - name: Verify Build Output Exists
+        run: ls -R export/release/linux/bin
       - name: Publish Linux Artifact
         uses: actions/upload-artifact@v4
         with:
@@ -56,7 +59,6 @@ jobs:
       - uses: krdlab/setup-haxe@master
         with:
           haxe-version: 4.2.5
-      # Ensure git is installed for cloning repositories
       - name: Ensure Git is Installed
         run: sudo apt-get update && sudo apt-get install git -y
       - name: Install Haxelib
@@ -80,6 +82,9 @@ jobs:
         run: echo "${{github.run_id}}" > VERSION
       - name: Compile HTML5
         run: haxelib run lime build Project.xml html5 --app-version="4.0.0-${{ github.run_id}}"
+      # Verify files exist before upload
+      - name: Verify Build Output Exists
+        run: ls -R export/release/html5/bin
       - name: Publish HTMl5 Artifact
         uses: actions/upload-artifact@v4
         with:
@@ -120,6 +125,10 @@ jobs:
         run: echo "${{github.run_id}}" > VERSION
       - name: Compile
         run: haxelib run lime build windows --app-version="4.0.0-${{ github.run_id}}"
+      # Verify files exist before upload
+      - name: Verify Build Output Exists
+        run: dir export\release\windows\bin
+        shell: cmd
       - name: Publish Artifact
         uses: actions/upload-artifact@v4
         with:
@@ -133,7 +142,6 @@ jobs:
       - uses: krdlab/setup-haxe@master
         with:
           haxe-version: 4.2.5
-      # Ensure git is installed for cloning repositories
       - name: Ensure Git is Installed
         run: brew install git
       - name: Install Haxelib
@@ -162,6 +170,9 @@ jobs:
         run: echo "${{github.run_id}}" > VERSION
       - name: Compile
         run: haxelib run lime build mac --app-version="4.0.0-${{ github.run_id}}"
+      # Verify files exist before upload
+      - name: Verify Build Output Exists
+        run: ls -R export/release/macos/bin
       - name: Publish Artifact
         uses: actions/upload-artifact@v4
         with:

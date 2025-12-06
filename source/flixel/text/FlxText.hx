@@ -989,79 +989,77 @@ class FlxTextFormat {
 	 * @param   Italic        Whether the text should be in italics (must be supported by the font). Only works on Flash. `false` by default.
 	 * @param   BorderColor   Border color, in `0xAARRGGBB` format. By default, no border (`null` / transparent).
 	 */
-		/*
-	public function new(?FontColor:FlxColor, ?Bold:Bool, ?Italic:Bool, ?BorderColor:FlxColor) {
-		format = new TextFormat(null, null, FontColor, Bold, Italic);
-		borderColor = BorderColor == null ? FlxColor.TRANSPARENT : BorderColor;
-	}
+		
+	//public function new(?FontColor:FlxColor, ?Bold:Bool, ?Italic:Bool, ?BorderColor:FlxColor) {
+		//format = new TextFormat(null, null, FontColor, Bold, Italic);
+		//borderColor = BorderColor == null ? FlxColor.TRANSPARENT : BorderColor;
+	//}
 
-	function set_leading(value:Int):Int {
-		format.leading = value;
-		return value;
-	}
-}
+	//function set_leading(value:Int):Int {
+	//	format.leading = value;
+	//	return value;
+	//}
+//}
 
-private class FlxTextFormatRange {
-	public var range(default, null):FlxRange<Int>;
-	public var format(default, null):FlxTextFormat;
+//private class FlxTextFormatRange {
+	//public var range(default, null):FlxRange<Int>;
+	//public var format(default, null):FlxTextFormat;
 
-	public function new(format:FlxTextFormat, start:Int, end:Int) {
-		range = new FlxRange<Int>(start, end);
-		this.format = format;
-	}
-}
+	//public function new(format:FlxTextFormat, start:Int, end:Int) {
+		//range = new FlxRange<Int>(start, end);
+		//this.format = format;
+	//}
+//}
 
-class FlxTextFormatMarkerPair {
-	public var format:FlxTextFormat;
-	public var marker:String;
+//class FlxTextFormatMarkerPair {
+	//public var format:FlxTextFormat;
+	//public var marker:String;
 
-	public function new(format:FlxTextFormat, marker:String) {
-		this.format = format;
-		this.marker = marker;
-	}
-}
+	//public function new(format:FlxTextFormat, marker:String) {
+		//this.format = format;
+		//this.marker = marker;
+	//}
+//}
 
-@:enum
-abstract FlxTextBorderStyle(String) from String {
-	var NONE = "NONE";
+//@:enum
+//abstract FlxTextBorderStyle(String) from String {
+	//var NONE = "NONE";
 
-	/**
-	 * A simple shadow to the lower-right.
-	 * Use `FlxText.shadowOffset` for custom placement.
-	 */
-		/*
-	var SHADOW = "SHADOW";
+	
+	 //* A simple shadow to the lower-right.
+	 //* Use `FlxText.shadowOffset` for custom placement.
+	 
+		
+	//var SHADOW = "SHADOW";
 
-	/**
-	 * Outline on all 8 sides
-	 */
-		 /*
-	var OUTLINE = "OUTLINE";
-		/*
+	
+	 //* Outline on all 8 sides
+	 
+		
+	//var OUTLINE = "OUTLINE";
+		
+	
+	// * Outline, optimized using only 4 draw calls (might not work for narrow and/or 1-pixel fonts)
+	 
+		
+	//var OUTLINE_FAST = "OUTLINE_FAST";
+//}
+	
+//@:enum
+//abstract FlxTextAlign(String) from String {
+	//var LEFT = "left";
 
-	/**
-	 * Outline, optimized using only 4 draw calls (might not work for narrow and/or 1-pixel fonts)
-	 /*
-	/*	
-	var OUTLINE_FAST = "OUTLINE_FAST";
-}/*
-	/*
-@:enum
-abstract FlxTextAlign(String) from String {
-	var LEFT = "left";
-/*
-	/**
+	
 	 * Warning: on Flash, this can have a negative impact on performance
 	 * of multiline texts that are frequently regenerated (especially with
 	 * `borderStyle == OUTLINE`) due to a workaround for blurry rendering.
-	 /*
-		/*
-	var CENTER = "center";
+	 
+		
+	//var CENTER = "center";
 
-	var RIGHT = "right";
-	var JUSTIFY = "justify";
- 		/*
-/*
+	//var RIGHT = "right";
+	//var JUSTIFY = "justify";
+ 		
 	public static function fromOpenFL(align:AlignType):FlxTextAlign {
 		return switch (align) {
 			case TextFormatAlign.LEFT: LEFT;
@@ -1070,8 +1068,8 @@ abstract FlxTextAlign(String) from String {
 			case TextFormatAlign.JUSTIFY: JUSTIFY;
 			default: LEFT;
 		}
-	}/*
-		/*
+	}
+		
 	public static function toOpenFL(align:FlxTextAlign):AlignType {
 		return switch (align) {
 			case LEFT: TextFormatAlign.LEFT;
@@ -1081,7 +1079,6 @@ abstract FlxTextAlign(String) from String {
 			default: TextFormatAlign.LEFT;
 		}
 	}
-}/*
-/*
+}
+
 private typedef AlignType = #if openfl_legacy String #else TextFormatAlign #end;
-/*

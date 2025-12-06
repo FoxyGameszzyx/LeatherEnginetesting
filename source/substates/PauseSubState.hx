@@ -32,7 +32,7 @@ class PauseSubState extends MusicBeatSubstate {
 
 	var pauseMusic:FlxSound = new FlxSound().loadEmbedded(Paths.music('breakfast'), true, true);
 
-	var scoreWarning:FlxText = new FlxText(20, 15 + 64, 0, "Remember, changing options invalidates your score!", 32);
+	//var scoreWarning:FlxText = new FlxText(20, 15 + 64, 0, "Remember, changing options invalidates your score!", 32);
 	var warningAmountLols:Int = 0;
 
 	var pauseCamera:FlxCamera = new FlxCamera();
@@ -405,3 +405,4 @@ class PauseSubState extends MusicBeatSubstate {
 		}
 	}
 }
+

@@ -1050,9 +1050,9 @@ class FlxTextFormat {
 	//var LEFT = "left";
 
 	
-	 * Warning: on Flash, this can have a negative impact on performance
-	 * of multiline texts that are frequently regenerated (especially with
-	 * `borderStyle == OUTLINE`) due to a workaround for blurry rendering.
+	 //* Warning: on Flash, this can have a negative impact on performance
+	// * of multiline texts that are frequently regenerated (especially with
+	// * `borderStyle == OUTLINE`) due to a workaround for blurry rendering.
 	 
 		
 	//var CENTER = "center";
